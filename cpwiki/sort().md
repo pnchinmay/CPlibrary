@@ -1,4 +1,4 @@
-[[cp]]
+[[index]]
 
 - Increasing order
     sort( a, a+n);
