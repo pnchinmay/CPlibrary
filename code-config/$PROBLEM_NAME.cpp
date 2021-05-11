@@ -9,8 +9,6 @@ const ll N=1e4+5;
 
 int solve()
 {
-    ll
-    cin>>
 
 
 
