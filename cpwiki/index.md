@@ -5,9 +5,8 @@ though, eventually your [[Zettelkasten]] will do more than fill memory gaps. Ins
 
 INDEX:
 
-- [X] Sort an array                             : [[sort()]]
+- [X] Sort an array, vector                             : [[sort()]]
 - [X] Convert characters to lowercase           : [[tolower()]]
 - [X] Convert characters to uppercase           : [[toupper()]]
 - [X] Convert strings to lowercase              : [[transform()]] & [[tolower()]]
-
 
