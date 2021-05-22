@@ -40,7 +40,7 @@ for filepath in "$@"; do
         cp -r -T "$CURRENT_TEMPLATE_DIR" "$filepath/"
     done
     rm -f "$filepath/$PARENT_FILE"
-    cat ~/programming/\$PROBLEM_NAME.cpp > ./$filepath/"$PROBLEM_NAME".cpp; echo "created '$PROBLEM_NAME'.cpp file"; cp ~/programming/Makefile ./$filepath/; cp ~/programming/setup ./$filepath/; sed -i '1s/^/PROBLEM_NAME := '$PROBLEM_NAME'\n/' ./$filepath/Makefile;
+    cat ~/programming/\$PROBLEM_NAME.cpp > ./$filepath/"$PROBLEM_NAME".cpp; echo "created '$PROBLEM_NAME'.cpp file"; cp ~/programming/Makefile ./$filepath/; cp ~/programming/setup ./$filepath/; sed -i '1s/^/PROBLEM_NAME := '$PROBLEM_NAME'\n/' ./$filepath/Makefile; cp ~/programming/.gitignore ./$filepath/; echo "created .gitignore file";
 
     pushd $filepath > /dev/null
     if [[ -e "setup" ]]; then
