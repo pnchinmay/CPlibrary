@@ -100,7 +100,9 @@ endif
 %.out: % # Cancel the builtin rule
 
 __test_%: %.res %.out
-	diff $*.res $*.out
+#When multiple answers are possible, then all tests must be run
+#For that, go to Makefile of that problem and add "-" before "diff  $*.res $*.out" i.e. before next line
+	-diff $*.res $*.out
 .PHONY: __test_%
 
 CASES := $(sort $(basename $(wildcard *.in)))
