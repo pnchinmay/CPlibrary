@@ -1,2 +1,3 @@
 .precompiled_headers/
 .cache/
+.clangd/

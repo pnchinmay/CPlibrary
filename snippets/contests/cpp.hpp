@@ -8,11 +8,11 @@ int solve()
 {
     ll
     cin>>
-    return 0;    
+    return 0;
 }
 int main() {
     IOS;
-    
+
     solve();
-    
+
 }

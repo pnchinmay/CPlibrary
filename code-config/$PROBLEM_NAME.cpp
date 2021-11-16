@@ -13,7 +13,7 @@ int solve()
 
 
 
-    return 0;    
+    return 0;
 }
 
 int main() {
@@ -22,8 +22,6 @@ int main() {
     ll t;
     cin >> t;
     while(t--) {
-    
         solve();
-    
     }
 }
