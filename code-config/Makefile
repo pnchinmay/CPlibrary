@@ -101,8 +101,8 @@ endif
 
 __test_%: %.res %.out
 #When multiple answers are possible, then all tests must be run
-#For that, go to Makefile of that problem and add "-" before "diff  $*.res $*.out" i.e. before next line
-	-diff $*.res $*.out
+#For that, go to Makefile of that problem and add "-" before "diff  $*.res $*.out --unified=2 -s" i.e. before next line
+	diff $*.res $*.out --unified=2 -s
 .PHONY: __test_%
 
 CASES := $(sort $(basename $(wildcard *.in)))
