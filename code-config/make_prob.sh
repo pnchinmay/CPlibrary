@@ -40,7 +40,18 @@ for filepath in "$@"; do
         cp -r -T "$CURRENT_TEMPLATE_DIR" "$filepath/"
     done
     rm -f "$filepath/$PARENT_FILE"
-    cat ~/programming/\$PROBLEM_NAME.cpp > ./$filepath/"$PROBLEM_NAME".cpp; echo "created '$PROBLEM_NAME'.cpp file" | lolcat; cp ~/programming/Makefile ./$filepath/; cp ~/programming/setup ./$filepath/; cp ~/programming/input.txt ./$filepath/; cp ~/programming/output.txt ./$filepath/; sed -i '1s/^/PROBLEM_NAME := '$PROBLEM_NAME'\n/' ./$filepath/Makefile; cp ~/programming/.gitignore ./$filepath/; echo "created .gitignore file";
+    cat ~/programming/\$PROBLEM_NAME.cpp > ./$filepath/"$PROBLEM_NAME".cpp;
+    echo "created '$PROBLEM_NAME'.cpp file" | lolcat;
+    cp ~/programming/Makefile ./$filepath/;
+    cp ~/programming/setup ./$filepath/;
+    cp ~/programming/input.txt ./$filepath/;
+    cp ~/programming/output.txt ./$filepath/;
+    sed -i '1s/^/PROBLEM_NAME := '$PROBLEM_NAME'\n/' ./$filepath/Makefile;
+    sed -i "3s/.*/ *      Created:    $(date)/" ./$filepath/"$PROBLEM_NAME".cpp;
+    cp ~/programming/.gitignore ./$filepath/;
+    echo "
+    created .gitignore file
+    ";
 
     pushd $filepath > /dev/null
     if [[ -e "setup" ]]; then
