@@ -42,12 +42,17 @@ for filepath in "$@"; do
     rm -f "$filepath/$PARENT_FILE"
     cat ~/programming/\$PROBLEM_NAME.cpp > ./$filepath/"$PROBLEM_NAME".cpp;
     echo "created '$PROBLEM_NAME'.cpp file" | lolcat;
+    cat ~/programming/\$PROBLEM_NAME.js> ./$filepath/"$PROBLEM_NAME".js;
+    echo "created '$PROBLEM_NAME'.js file" | lolcat;
     cp ~/programming/Makefile ./$filepath/;
+    cp ~/programming/approach.md ./$filepath/;
     cp ~/programming/setup ./$filepath/;
     cp ~/programming/input.txt ./$filepath/;
     cp ~/programming/output.txt ./$filepath/;
+    mkdir -p ./$filepath/assets/images;
     sed -i '1s/^/PROBLEM_NAME := '$PROBLEM_NAME'\n/' ./$filepath/Makefile;
     sed -i "3s/.*/ *      Created:    $(date)/" ./$filepath/"$PROBLEM_NAME".cpp;
+    sed -i "3s/.*/ *      Created:    $(date)/" ./$filepath/"$PROBLEM_NAME".js;
     cp ~/programming/.gitignore ./$filepath/;
     echo "
     created .gitignore file
