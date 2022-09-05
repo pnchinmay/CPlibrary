@@ -5,7 +5,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define IOS ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+#define fastio() ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 #define endl "\n"
 
 typedef long long ll;
@@ -19,6 +19,8 @@ typedef long long ll;
 #define maxheap priority_queue
 #define uset unordered_set
 #define umap unordered_map
+#define PI 3.141592653589793238462
+#define set_bits __builtin_popcountll
 
 #define fr(i,x,n) for(ll (i)=(x); (i)<(n); (i)++)
 #define revfr(i, x, n) for(big i = x - 1; i >= n; i--)
@@ -31,7 +33,8 @@ typedef long long ll;
 const ll N=1e4+5;
 const ll mod = 1000000007;
 const ll infinity = 1000000000000000000;
-bool do_debug = false;
+bool do_debug = 0;
+int eval_testcases = 0;
 
 int solve()
 {
@@ -43,11 +46,15 @@ int solve()
 }
 
 int main() {
-    IOS;
+    fastio();
 
-    ll t;
-    cin >> t;
-    while(t--) {
-        solve();
+    if(eval_testcases){
+        ll t;
+        cin >> t;
+        while(t--) {
+            solve();
+        }
     }
+    else
+        solve();
 }
