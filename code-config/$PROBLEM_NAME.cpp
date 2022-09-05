@@ -29,8 +29,8 @@ typedef long long ll;
 #define debug(text) if(do_debug) {cout << text << endl;}
 
 const ll N=1e4+5;
-const big mod = 1000000007;
-const big infinity = 1000000000000000000;
+const ll mod = 1000000007;
+const ll infinity = 1000000000000000000;
 bool do_debug = false;
 
 int solve()
