@@ -2,8 +2,8 @@
    identification information */
 /*
 ID: gandalf11
-TASK: gift1
-LANG: C++14
+TASK: blocks
+LANG: C++17
 */
 /* LANG can be C++11 or C++14 for those more recent releases */
 #include <bits/stdc++.h>
@@ -15,19 +15,20 @@ using namespace std;
 #define forx(i,x,n) for(ll (i)=(x); (i)<(n); (i)++)
 
 const ll N = 1e4 + 5;
+
 int solve()
 {
     ll n;
     cin>>n;
-    
-    
- 
+
+
     return 0;    
 }
+
 int main() {
     IOS;
-    freopen("gift1.in", "r", stdin);
-    freopen("gift1.out", "w", stdout);
+    freopen("blocks.in", "r", stdin);
+    freopen("blocks.out", "w", stdout);
       
     solve();
 }
