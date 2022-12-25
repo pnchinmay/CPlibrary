@@ -28,7 +28,8 @@ typedef long long ll;
 #define all(x) begin(x), end(x)
 #define sz(x) (int)(x).size()
 
-#define debug(text) if(do_debug) {cout << text << endl;}
+#define debug(text) if(do_debug) {cerr << text << endl;}
+#define dbg(v) if(do_debug) { cerr << "Line(" << __LINE__ << ") -> " << #v << " = " << (v) << endl; }
 
 const ll N=1e4+5;
 const ll mod = 1000000007;
