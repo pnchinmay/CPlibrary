@@ -1,3 +1,8 @@
+
+- Algorithm Design Canvas -- Combine this method in Obsidian & then ship to Github
+https://www.hiredintech.com/classrooms/algorithm-design/lesson/78
+
+
 ####  Topics Used
 - 
 
