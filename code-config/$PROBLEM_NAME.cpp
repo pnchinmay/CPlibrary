@@ -4,6 +4,7 @@
 **/
 #include <bits/stdc++.h>
 using namespace std;
+using namespace chrono;
 
 #define fastio() ios::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 #define endl "\n"
@@ -73,6 +74,15 @@ template <class T, size_t N> void ___print(T (&arr)[N]) { cerr << "[ "; for (siz
 #define debug(v);
 #endif
 
+mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
+
+/*-------------------------------------------------------------------*/
+ll gcd(ll a, ll b) { return b ? gcd(b, a%b) : a; }
+ll mod_add(ll a, ll b, ll m) {a = a % m; b = b % m; return (((a + b) % m) + m) % m;}
+ll mod_mul(ll a, ll b, ll m) {a = a % m; b = b % m; return (((a * b) % m) + m) % m;}
+ll mod_sub(ll a, ll b, ll m) {a = a % m; b = b % m; return (((a - b) % m) + m) % m;}
+ll getRandomNumber(ll l, ll r) {return uniform_int_distribution<ll>(l, r)(rng);} 
+/*-------------------------------------------------------------------*/
 
 const ll N=1e4+5;
 const ll mod = 1000000007;
@@ -88,6 +98,7 @@ int solve()
 
 int main() {
     fastio();
+    auto start1 = high_resolution_clock::now();
 
     if(eval_testcases){
         ll t;
@@ -98,4 +109,9 @@ int main() {
     }
     else
         solve();
+
+    
+    auto stop1 = high_resolution_clock::now();
+    auto duration = duration_cast<microseconds>(stop1 - start1);
+    cerr << "Time: " << duration . count() << "ms" << endl;
 }
