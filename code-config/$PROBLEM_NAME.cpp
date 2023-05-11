@@ -30,6 +30,10 @@ typedef long double lld;
 #define fr(i,x,n) for(ll (i)=(x); (i)<(n); (i)++)
 #define revfr(i, x, n) for(ll i = x - 1; i >= n; i--)
 
+#define read(p,q,arr) for(int i=p;i<q;++i) cin>>arr[i];
+#define print(p,q,arr) for(int i=p;i<q;++i) cout<<arr[i]<<" ";
+
+
 #define all(x) begin(x), end(x)
 #define sz(x) (int)(x).size()
 
@@ -43,21 +47,26 @@ void ___print(double t) {cerr << t;}
 void ___print(ull t) {cerr << t;}
  
  
+//Declartion
 template <class T, class V> void ___print(pair <T, V> p);
 template <class T> void ___print(vector <T> v);
 template <class T> void ___print(set <T> v);
 template <class T, class V> void ___print(map <T, V> v);
 template <class T> void ___print(multiset <T> v);
+
+//Definition
 template <class T, class V> void ___print(pair <T, V> p) {cerr << "{"; ___print(p.ff); cerr << ","; ___print(p.ss); cerr << "}";}
 template <class T> void ___print(vector <T> v) {cerr << "[ "; for (T i : v) {___print(i); cerr << " ";} cerr << "]";}
 template <class T> void ___print(set <T> v) {cerr << "[ "; for (T i : v) {___print(i); cerr << " ";} cerr << "]";}
-template <class T> void ___print(multiset <T> v) {cerr << "[ "; for (T i : v) {___print(i); cerr << " ";} cerr << "]";}
 template <class T, class V> void ___print(map <T, V> v) {cerr << "[ "; for (auto i : v) {___print(i); cerr << " ";} cerr << "]";}
+template <class T> void ___print(multiset <T> v) {cerr << "[ "; for (T i : v) {___print(i); cerr << " ";} cerr << "]";}
+
 template <class T, size_t N> void ___print(T (&arr)[N]) { cerr << "[ "; for (size_t i = 0; i < N; ++i) { ___print(arr[i]); cerr << " "; } cerr << "]"; }
 //EXAMPLE: nested array
 //fr(i,0,sizeof(nestedArray)/sizeof(nestedArray[0]))
     //debug(nestedArray[i]);
 
+ 
 #ifndef ONLINE_JUDGE
 #define debug(v) if(do_debug) { cerr << "Line(" << __LINE__ << ") -> " << #v << " = ";___print(v); cerr << endl; }
 #else
@@ -73,9 +82,6 @@ int eval_testcases = 0;
 
 int solve()
 {
-
-
-
 
     return 0;
 }
