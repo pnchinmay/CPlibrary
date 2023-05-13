@@ -13,30 +13,65 @@ typedef long long ll;
 typedef unsigned long long ull;
 typedef long double lld;
 
-#define llvec vector<ll>
 #define pll pair<ll, ll>
 #define pii pair<int, int>
 #define vi vector<int>
+#define vll vector<ll>
+#define vstr vector<string>
+#define vc vector<char>
+#define vb vector<bool>
+
+#define vvi vector<vi>
+#define vvl vector<vll>
+#define vpi vector<pii>
+#define vvstr vector<vstr>
+
 #define ff first
 #define ss second
 #define pb push_back
 #define ppb pop_back
 #define mp make_pair
+
 #define maxheap priority_queue
 #define uset unordered_set
 #define umap unordered_map
 #define PI 3.141592653589793238462
+#define gap " "
+#define INF 1e9
+#define EPS 1e-9
 #define set_bits __builtin_popcountll
+#define PERMUTE next_permutation
 
 #define fr(i,x,n) for(ll (i)=(x); (i)<(n); (i)++)
 #define revfr(i, x, n) for(ll i = x - 1; i >= n; i--)
+#define trav(a,v) for(auto a : v)
+#define all(x,i,j) x.begin()+i, x.end()-j
+#define allar(arr,i,j) arr+i, arr+sza(arr)-j
+#define rall(x) x.rbegin(), x.rend()
+#define sz(x) (int)(x).size()
+#define sza(x) sizeof(x)/sizeof(x[0])
+#define RESET(a,b) memset(a,b,sizeof(a))
+
+#define SORT(v,i,j) sort(all(v,i,j))
+//for functions like greater<int>(), custom_square<ll>();
+#define SORTFUN(v,i,j,boolfun) sort(all(v,i,j),boolfun)
+#define SORTDEC(v) sort(rall(v))
+
+#define SORTA(arr,i,j) sort(allar(arr,i,j))
+//note: SORTAFUN() & SORTAREV() are same
+//for function greater<int>(), custom_square<ll>();
+#define SORTAFUN(arr,i,j,boolfun) sort(allar(arr,i,j),boolfun)
+//for function greater<int>(), custom_square<ll>();
+#define SORTAREV(arr,i,j,boolfun) sort(allar(arr,i,j),boolfun)
+
+
+#define REVERSE(v,i,j) reverse(all(v,i,j))
+#define REVERSEA(arr,i,j) reverse(allar(arr,i,j))
 
 #define read(p,q,arr) for(int i=p;i<q;++i) cin>>arr[i];
-#define print(p,q,arr) for(int i=p;i<q;++i) cout<<arr[i]<<" ";
-
-
-#define all(x) begin(x), end(x)
-#define sz(x) (int)(x).size()
+#define read2(p,q,a,b) for(int i=p;i<q;++i) cin>>a[i]>>b[i];
+#define write(p,q,arr) for(int i=p;i<q;++i) {cout<<arr[i]<<" ";} cout<<endl;
+#define write2(p,q,a,b) for(int i=p;i<q;++i) cout<<a[i]<<" "<<b[i]<<endl;
 
 
 void ___print(ll t) {cerr << t;}
@@ -85,7 +120,7 @@ ll getRandomNumber(ll l, ll r) {return uniform_int_distribution<ll>(l, r)(rng);}
 /*-------------------------------------------------------------------*/
 
 const ll N=1e4+5;
-const ll mod = 1000000007;
+const ll M = 1000000007;
 const ll infinity = 1000000000000000000;
 bool do_debug = 1;
 int eval_testcases = 0;
