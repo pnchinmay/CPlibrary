@@ -43,14 +43,14 @@ typedef long double lld;
 #define PERMUTE next_permutation
 
 #define fr(i,x,n) for(ll (i)=(x); (i)<(n); (i)++)
-#define revfr(i, x, n) for(ll i = x - 1; i >= n; i--)
+#define revfr(i, x, n) for(ll i = ( x ) - 1; i >= ( n ); i--)
 #define trav(a,v) for(auto a : v)
-#define all(x,i,j) x.begin()+i, x.end()-j
-#define allar(arr,i,j) arr+i, arr+sza(arr)-j
+#define all(x,i,j) x.begin()+( i ), x.end()-( j )
+#define allar(arr,i,j) arr+( i ), arr+sza(arr)-( j )
 #define rall(x) x.rbegin(), x.rend()
 #define sz(x) (int)(x).size()
 #define sza(x) sizeof(x)/sizeof(x[0])
-#define RESET(a,b) memset(a,b,sizeof(a))
+#define RESET(a,b) memset(a,( b ),sizeof(a))
 
 #define SORT(v,i,j) sort(all(v,i,j))
 //for functions like greater<int>(), custom_square<ll>();
@@ -68,19 +68,19 @@ typedef long double lld;
 #define REVERSE(v,i,j) reverse(all(v,i,j))
 #define REVERSEA(arr,i,j) reverse(allar(arr,i,j))
 
-#define read(p,q,arr) for(int i=p;i<q;++i) cin>>arr[i];
-#define read2(p,q,a,b) for(int i=p;i<q;++i) cin>>a[i]>>b[i];
-#define write(p,q,arr) for(int i=p;i<q;++i) {cout<<arr[i]<<" ";} cout<<endl;
-#define write2(p,q,a,b) for(int i=p;i<q;++i) cout<<a[i]<<" "<<b[i]<<endl;
+#define read(p,q,arr) for(int i=( p );i<( q );++i) cin>>arr[i];
+#define read2(p,q,a,b) for(int i=( p );i<( q );++i) cin>>a[i]>>b[i];
+#define write(p,q,arr) for(int i=( p );i<( q );++i) {cout<<arr[i]<<" ";} cout<<endl;
+#define write2(p,q,a,b) for(int i=( p );i<( q );++i) cout<<a[i]<<" "<<b[i]<<endl;
 
 
-void ___print(ll t) {cerr << t;}
-void ___print(int t) {cerr << t;}
-void ___print(string t) {cerr << t;}
-void ___print(char t) {cerr << t;}
-void ___print(lld t) {cerr << t;}
-void ___print(double t) {cerr << t;}
-void ___print(ull t) {cerr << t;}
+void ___print(ll t) {cerr << ( t );}
+void ___print(int t) {cerr << ( t );}
+void ___print(string t) {cerr << ( t );}
+void ___print(char t) {cerr << ( t );}
+void ___print(lld t) {cerr << ( t );}
+void ___print(double t) {cerr << ( t );}
+void ___print(ull t) {cerr << ( t );}
  
  
 //Declartion
@@ -116,6 +116,7 @@ ll gcd(ll a, ll b) { return b ? gcd(b, a%b) : a; }
 ll mod_add(ll a, ll b, ll m) {a = a % m; b = b % m; return (((a + b) % m) + m) % m;}
 ll mod_mul(ll a, ll b, ll m) {a = a % m; b = b % m; return (((a * b) % m) + m) % m;}
 ll mod_sub(ll a, ll b, ll m) {a = a % m; b = b % m; return (((a - b) % m) + m) % m;}
+//additional +m is being added to handle the case if remainder is -ve; doesn't have any effect when remainder is +ve
 ll getRandomNumber(ll l, ll r) {return uniform_int_distribution<ll>(l, r)(rng);} 
 /*-------------------------------------------------------------------*/
 

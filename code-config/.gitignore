@@ -1,6 +1,5 @@
 .precompiled_headers/
 .cache/
 .clangd/
-*.out
 *.gch
 *.pch
